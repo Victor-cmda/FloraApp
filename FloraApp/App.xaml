@@ -1,0 +1,18 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FloraApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Cores Personalizadas Adicionais -->
+            <Color x:Key="ButtonTextColor">White</Color>
+            <Color x:Key="CardBackgroundLight">#F5F5F5</Color>
+            <Color x:Key="CardBackgroundDark">#2B2B2B</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FloraApp.MainPage"
+             BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto,Auto,*"
+              Padding="20">
+
+            <!-- Cabeçalho -->
+            <Frame Grid.Row="0" 
+                   Margin="0,20,0,0"
+                   BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray900}}"
+                   BorderColor="Transparent"
+                   CornerRadius="15"
+                   HeightRequest="120"
+                   Padding="20">
+                <Grid ColumnDefinitions="Auto,*">
+                    <Image Grid.Column="0"
+                           Source="dotnet_bot.png"
+                           HeightRequest="60"
+                           WidthRequest="60"
+                           VerticalOptions="Center"/>
+                    <VerticalStackLayout Grid.Column="1" 
+                                       Spacing="5"
+                                       Margin="15,0,0,0"
+                                       VerticalOptions="Center">
+                        <Label Text="Sistema Flora"
+                               TextColor="White"
+                               FontSize="32"
+                               FontAttributes="Bold"/>
+                        <Label Text="Gestão de Floricultura"
+                               TextColor="White"
+                               FontSize="16"
+                               Opacity="0.8"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Mensagem de Boas-vindas -->
+            <Frame Grid.Row="1"
+                   Margin="0,20"
+                   BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}"
+                   BorderColor="Transparent"
+                   CornerRadius="10"
+                   Padding="20">
+                <Label Text="Selecione uma opção para começar"
+                       HorizontalOptions="Center"
+                       FontSize="18"
+                       TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}"
+                       FontAttributes="Bold"/>
+            </Frame>
+
+            <!-- Grid de Botões -->
+            <Grid Grid.Row="2" 
+                  RowDefinitions="*,*"
+                  ColumnDefinitions="*,*"
+                  RowSpacing="20"
+                  ColumnSpacing="20">
+
+                <!-- Botão Vendas -->
+                <Frame Grid.Row="0" 
+                       Grid.Column="0"
+                       BackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray800}}"
+                       BorderColor="Transparent"
+                       CornerRadius="15">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSalesClicked"/>
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout Spacing="15" 
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center">
+                        <Image Source="dotnet_bot.png"
+                               HeightRequest="50"
+                               WidthRequest="50"/>
+                        <Label Text="Vendas"
+                               TextColor="White"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Botão Produtos -->
+                <Frame Grid.Row="0" 
+                       Grid.Column="1"
+                       BackgroundColor="{AppThemeBinding Light={StaticResource Tertiary}, Dark={StaticResource Gray800}}"
+                       BorderColor="Transparent"
+                       CornerRadius="15">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProductsClicked"/>
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout Spacing="15" 
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center">
+                        <Image Source="dotnet_bot.png"
+                               HeightRequest="50"
+                               WidthRequest="50"/>
+                        <Label Text="Produtos"
+                               TextColor="White"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Botão Funcionários -->
+                <Frame Grid.Row="1" 
+                       Grid.Column="0"
+                       BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray800}}"
+                       BorderColor="Transparent"
+                       CornerRadius="15">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnEmployeesClicked"/>
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout Spacing="15" 
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center">
+                        <Image Source="dotnet_bot.png"
+                               HeightRequest="50"
+                               WidthRequest="50"/>
+                        <Label Text="Funcionários"
+                               TextColor="White"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Botão Relatórios -->
+                <Frame Grid.Row="1" 
+                       Grid.Column="1"
+                       BackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray800}}"
+                       BorderColor="Transparent"
+                       CornerRadius="15">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnReportsClicked"/>
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout Spacing="15" 
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center">
+                        <Image Source="dotnet_bot.png"
+                               HeightRequest="50"
+                               WidthRequest="50"/>
+                        <Label Text="Relatórios"
+                               TextColor="White"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </Grid>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
